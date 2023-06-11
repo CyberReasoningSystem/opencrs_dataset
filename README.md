@@ -20,11 +20,11 @@ opencrs_dataset                             root folder
 
 ### Parent Test Suites
 
-| Test Suite Name                                                                                       | Creator                                                                                                | Initial Sources Count | Final Executables Count |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------- | ----------------------- |
-| [Juliet C/C++ 1.3](https://samate.nist.gov/SARD/test-suites/112)                                      | National Security Agency's Center for Assured Software. National Institute of Standards and Technology | `64123`               | `54531`                 |
-| [C Test Suite for Source Code Analyzer v2 - Vulnerable](https://samate.nist.gov/SARD/test-suites/100) | Alexander Hoole. National Institute of Standards and Technology                                        | `54`                  | `50`                    |
-| Toy Test Suite                                                                                        | OpenCRS                                                                                                | `5`                   | `5`                     |
+| Identifier          | Test Suite Name                                                                                       | Creator                                                                                                | Initial Sources Count | Final Executables Count |
+| ------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------- | ----------------------- |
+| `nist_juliet`       | [Juliet C/C++ 1.3](https://samate.nist.gov/SARD/test-suites/112)                                      | National Security Agency's Center for Assured Software. National Institute of Standards and Technology | `64123`               | `54531`                 |
+| `nist_c_test_suite` | [C Test Suite for Source Code Analyzer v2 - Vulnerable](https://samate.nist.gov/SARD/test-suites/100) | Alexander Hoole. National Institute of Standards and Technology                                        | `54`                  | `50`                    |
+| `toy_test_suite`    | Toy Test Suite                                                                                        | OpenCRS                                                                                                | `5`                   | `5`                     |
 
 ### Top 10 Present Weaknesses
 
@@ -40,6 +40,14 @@ opencrs_dataset                             root folder
 | Buffer Underflow                           | `2048`  |
 | Buffer Under-read                          | `2048`  |
 | OS Command Injection                       | `1921`  |
+
+## Labels
+
+The columns present in the `index.csv` file are the following:
+
+- `name`: Unique identifier of a vulnerable program. It is used to determine the executable file path, namely by using the format `executables/<name>.elf`;
+- `cwes`: One or more CWEs that are present in the executable; and
+- `parent_dataset`: Parent dataset's identifier.
 
 ## Steps to Reproduce
 
